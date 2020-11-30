@@ -1,0 +1,10 @@
+<h1>welcome to crud application</h1>
+<a routerLink="ptab">Display table</a><br>
+<a routerLink="plist">Display List</a>
+
+<form #frm="ngForm" (ngSubmit)="submitform(frm.value)">
+    Id:<input type="text" name="id" ngModel require><br>
+    Name:<input type="text" name="nm" ngModel required minlength="3"><br>
+<button type="submit" name="btn" [disabled]="!frm.valid">Submit</button>
+</form>
+<router-outlet></router-outlet>
